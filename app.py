@@ -1,6 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'bk000-Wedding 페이지 입니다.'
+    return render_template('index.html')
+
+
+if __name__ == '__main__':
+    app.run(threaded=True, port=5000, debug=True)
