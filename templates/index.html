@@ -1,9 +1,203 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        <style>
+            body {
+              margin: 0px;
+            }
+
+            .wrap {
+              width: 100%;
+            }
+
+            .slider {
+                margin:  30px auto 20px;
+            }
+
+            .slider img {
+                /* height: 400px; */
+                width: 100%;
+            }
+
+
+            .slider-nav img {
+                width: 100%;
+            }
+
+            .slider-nav div {
+                margin: 3px;
+                /* padding: 2%; */
+            }
+
+            .slick-prev:before, .slick-next:before {
+                color: #aaa;
+            }
+
+            .text-title {
+              text-align: center;
+            }
+
+            .text-content {
+              margin-left: 30px;
+            }
+
+            .text-sub {
+              font-size: 12px;
+              margin-left: 30px;
+            }
+
+            .footer {
+              width: 100%;
+              height: 200px;
+              margin-top: 70px;
+              background-color: goldenrod;
+            }
+        </style>
+    
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g8v4dwcflm"></script>
+    </head>
     <body>
-        <div style="position: absolute; top: 0px; left: 0px;">
-        <img style="width: 100%;" src="{{ url_for('static', filename='img/img1.jpg') }}"/>
+      <div class='wrap'>
+      
+        <img src="{{ url_for('static', filename='img/img01.jpg') }}" style="width: 100%;"/>
+        
+
+        <div class="text" style="margin-bottom: 110px;">
+          <p class="text-title">2020년 12월 13일 일요일 오전11시</p>
+          <p class="text-title">청담 드레스가든<p>
+          </br>
+          <p class="text-content">결혼합니다.</p>
+          <p class="text-content">저희 두사람이 하나가 되는</p>
+          <p class="text-content">뜻깊은 날을 맞이하게 되었습니다.</p>
+          <p class="text-content">힘찬 새 출발이 될 수 있도록 격려와 축복의</p>
+          <p class="text-content">박수를 보내주시면 감사하겠습니다.</p>
+          </br>
+          <p class="text-content">모두가 어렵고 힘든시기에 결혼 소식을</p>
+          <p class="text-content">전하게 되어 죄송스러운 마음이 큽니다.</p>
+          <p class="text-content">계신 자리에서 축복 해 주시면</p>
+          <p class="text-content">그 마음 평생 간직하고 행복하게 잘 살겠습니다.</p>
+          </br>
+          <p class="text-sub">코로나 19로 식장에서도 방역 대책을 마련하여 방역 및 홀 외</p>
+          <p class="text-sub">연회장의 식사 공간에 대해서도 많은 신경을 쓰고 계시니</p>
+          <p class="text-sub">어려운 발걸음이라도 함께 해주신다면 더욱 감사한 마음을 갖고</p>
+          <p class="text-sub">더 큰사랑을 품을 가족으로 보답 드리겠습니다.</p>
+          <p class="text-sub">감사합니다.</p>
+
+          <div style=" margin-top:40px; height:110px">
+            <div style="width: 50%; float: left; background-color: #aaa; height: 110px; color: #111; text-align: center; padding-top: 60px;">
+              구자역 권희남 <span>의 장남</span> 
+              <p>본상</p>
+            </div>
+            <div style="width: 50%; float: right; background-color: #111; height: 110px; color: #ddd; text-align: center;  padding-top: 60px;">
+              김종국 김정옥 <span>의 장녀</span> 
+              <p>보경</p>
+            </div>
+          </div>
+
         </div>
+
+        <div style="width: 80%; margin-left: 10%; text-align: center;">
+          <div class="slider">
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+              </div>
+          </div>
+  
+          <div class="slider-nav">
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+              </div>
+              <div>
+                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+              </div>
+          </div>
+        </div>
+
+        <div style="padding:30px 0px 40px 0px">
+          <p class="text-content">오시는 길</p>
+          </br>
+          <p class="text-content">청담 드레스가든</p>
+          <p class="text-content">서울 강남구 영동대로 707</p>
+        </div>
+  
+          <div id="daumRoughmapContainer1602990447168" class="root_daum_roughmap root_daum_roughmap_landing" style="margin: 0 auto;"></div>
+
+          <div class='footer'></div>
+      </div>
+        
+      
+      
+      
+        
+        
+
+
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.slider').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: true,
+                    centerMode: true,
+                    asNavFor: '.slider-nav',
+                    adaptiveHeight: true
+                });
+
+                $('.slider-nav').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    asNavFor: '.slider',
+                    dots: false,
+                    arrows: false,
+                    centerMode: true,
+                    focusOnSelect: true
+                })
+
+
+                  new daum.roughmap.Lander({
+                    "timestamp" : "1602990447168",
+                    "key" : "22hsj",
+                    "mapWidth" : "400",
+                    "mapHeight" : "360"
+                  }).render();
+
+            });
+        </script>        
     </body>
 </html>
