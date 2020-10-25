@@ -302,7 +302,7 @@
             </tr>
             <tr>
               <td colspan="2" style="margin-bottom: 10%;">
-                <img src="{{ url_for('static', filename='img/footer.jpg') }}" style="width: 100%;"/>
+                <img src="{{ url_for('static', filename='img/footer.jpg?d=1025') }}" style="width: 100%;"/>
               </td>
             </tr>
           </table>
@@ -377,7 +377,7 @@
                     focusOnSelect: true
                 })
 
-
+                  $("#share_btn").click();
                   new daum.roughmap.Lander({
                     "timestamp" : "1602990447168",
                     "key" : "22hsj",
