@@ -220,22 +220,22 @@
         <div style="text-align: center;">
           <table style="width: 90%; margin-left:5%; text-align: left;">
             <tr>
-              <td style="width: 25%;">신랑혼주</td>
-              <td style="width: 70%;" id="id_01">농협 356-0548-2625-33 (구자역)</td>
+              <td style="width: 20%;">신랑혼주</td>
+              <td style="width: 75%;" id="id_01">농협 356-0548-2625-33 (구자역)</td>
               <td style="width: 15%;">
                 <a href="javascript:copyfunc('id_01');">복사</a>
               </td>
             </tr>
             <tr>
-              <td style="width: 25%;">신랑</td>
-              <td style="width: 70%;" id="id_02">신한 110-349-232252  (구본상)</td>
+              <td style="width: 20%;">신랑</td>
+              <td style="width: 75%;" id="id_02">신한 110-349-232252  (구본상)</td>
               <td style="width: 15%;">
                 <a href="javascript:copyfunc('id_01');">복사</a>
               </td>
             </tr>
             <tr>
-              <td style="width: 25%;">신부혼주</td>
-              <td style="width: 70%;" id="id_03">국민  (김종국)</td>
+              <td style="width: 20%;">신부혼주</td>
+              <td style="width: 75%;" id="id_03">국민  (김종국)</td>
               <td style="width: 15%;">
                 <a href="javascript:copyfunc('id_03');">복사</a>
               </td>
@@ -302,7 +302,7 @@
           Kakao.isInitialized();
 
           function share(){
-            $("#share_btn").on('click', event => {
+            $("#share_btn").off('click').on('click', event => {
               if (navigator.share) {
                 navigator.share({
                   title: '구본상·김보경 모바일 청첩장',
@@ -312,7 +312,7 @@
                 })
                 .catch(console.error);
               } else {
-                shareDialog.classList.add('is-open');
+                // shareDialog.classList.add('is-open');
               }
             });
           }
@@ -333,14 +333,11 @@
 
               /* Copy the text inside the text field */
               document.execCommand("copy");
+              alert('복사되었습니다.')
             }
 
 
             $(document).ready(function(){
-
-              
-                           
-
                 $('.slider').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
