@@ -62,7 +62,8 @@
 
             
         </style>
-    
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
     </head>
     <body >
       <div class='wrap'>
@@ -241,7 +242,39 @@
             </tr>
           </table>
         </div>
-        <a href="javascript:share();">공유</a>
+        <a id="kakao-link-btn" href="javascript:sendLink()">
+          <img
+            src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+          />
+        </a>
+        <script type="text/javascript">
+          function sendLink() {
+            Kakao.Link.sendDefault({
+              objectType: 'feed',
+              content: {
+                title: '구본상·김보경 모바일 청첩장',
+                description: '#구본상 #김보경 #청접장',
+                imageUrl:
+                  '/static/img/slider/2_4.jpg',
+                link: {
+                  mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
+                  webUrl: 'https://bk000-wedding.herokuapp.com/',
+                },
+              },
+              buttons: [
+                {
+                  title: '웹으로 보기',
+                  link: {
+                    mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
+                    webUrl: 'https://bk000-wedding.herokuapp.com/',
+                  },
+                },
+              ],
+            })
+          }
+        </script>
+
+        
         <img src="{{ url_for('static', filename='img/img03.jpg') }}"/>
         <img src="{{ url_for('static', filename='img/footer.jpg') }}"/>
       </div>
@@ -253,6 +286,9 @@
 
         <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
         <script>
+          Kakao.init('6252a289057284871479f56e5959b223');
+          Kakao.isInitialized();
+
           function share(){
             if (navigator.share) {
               navigator.share({
