@@ -48,6 +48,25 @@
                 /* padding: 2%; */
             }
 
+            .prev.slick-arrow {
+              border: unset;
+              background: transparent;
+              position: absolute;
+              top: 261px;
+              z-index: 1;
+              width: 50px;
+              left: -21px;
+            }
+            
+            .next.slick-arrow {
+              border: unset;
+              background: transparent;
+              position: absolute;
+              top: 261px;
+              z-index: 1;
+              width: 50px;
+              right: -21px;
+            }
          
 /* 
             .text-title {
@@ -133,8 +152,8 @@
         </table>
         
 
-        <div style="width: 90%; margin-left: 5%; overflow: hidden;"> 
-          <div class="slider">
+        <div style="width: 100%; overflow: hidden;"> 
+          <div class="slider" style="width: 90%; margin-left: 5%;">
               <div>
                 <img src="{{ url_for('static', filename='img/slider/1_1.jpg') }}"/>
               </div>
@@ -225,66 +244,42 @@
 
         <img src="{{ url_for('static', filename='img/img02.jpg') }}"/>
         
+
         
-        
-
-        <script type="text/javascript">
-          function sendLink() {
-            Kakao.Link.sendDefault({
-              objectType: 'feed',
-              content: {
-                title: '구본상·김보경 모바일 청첩장',
-                description: '#구본상 #김보경 #청접장 #12월13일 #청담드레스가든',
-                imageUrl:
-                  'https://bk000-wedding.herokuapp.com/static/img/slider/2_3.jpg',
-                link: {
-                  mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
-                  webUrl: 'https://bk000-wedding.herokuapp.com/',
-                },
-              },
-              buttons: [
-                {
-                  title: '청첩장 보기',
-                  link: {
-                    mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
-                    webUrl: 'https://bk000-wedding.herokuapp.com/',
-                  },
-                },
-              ],
-            })
-          }
-        </script>
-
-
-        <img src="{{ url_for('static', filename='img/img03.jpg') }}"/>
-        <!-- <div style="width: 100%; height: 300px; background-image: url(/static/img/back.jpg);">
-          <h1 style="    padding: 50px 20px 10px;">마음 전하실 곳</h1>
-          <div style="text-align: center;">
-            <table style="width: 90%; margin-left:5%; text-align: left;">
-              <tr>
-                <td style="width: 20%;">신랑혼주</td>
-                <td style="width: 75%;" id="id_01">농협 356-0548-2625-33 (구자역)</td>
-                <td style="width: 15%;">
-                  <a href="javascript:copyfunc('id_01');" style="font-style: unset; font-size: 10px;">복사</a>
-                </td>
-              </tr>
-              <tr>
-                <td style="width: 20%;">신랑</td>
-                <td style="width: 75%;" id="id_02">신한 110-349-232252  (구본상)</td>
-                <td style="width: 15%;">
-                  <a href="javascript:copyfunc('id_01');" style="font-style: unset; font-size: 10px;">복사</a>
-                </td>
-              </tr>
-              <tr>
-                <td style="width: 20%;">신부혼주</td>
-                <td style="width: 75%;" id="id_03">국민  (김종국)</td>
-                <td style="width: 15%;">
-                  <a href="javascript:copyfunc('id_03');" style="font-style: unset; font-size: 10px;">복사</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div> -->
+        <div style="width: 100%; background-image: url('/static/img/back.jpg');">
+          <img src="{{ url_for('static', filename='img/a_01.jpg') }}" style="width: 100%;"/>
+          <table>
+            <tr>
+              <td style="width: 85%;">
+                <img src="{{ url_for('static', filename='img/a_02.jpg') }}" style="width: 100%;"/>
+              </td>
+              <td style="width: 15%; padding: 2%;">
+                <a href="javascript:copyfunc('농협 3560548262533');">
+                <img src="{{ url_for('static', filename='img/copy.jpg') }}" style="width: 100%;"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 85%;">
+                <img src="{{ url_for('static', filename='img/a_03.jpg') }}" style="width: 100%;"/></td>
+              <td style="width: 15%;  padding: 2%;">
+                <a href="javascript:copyfunc('신한 110349232252');">
+                  <img src="{{ url_for('static', filename='img/copy.jpg') }}" style="width: 100%;"/>
+                  </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 85%;">
+                <img src="{{ url_for('static', filename='img/a_04.jpg') }}" style="width: 100%;"/></td>
+              <td style="width: 15%;  padding: 2%;">
+                <a href="javascript:copyfunc('국민 806210101131');">
+                  <img src="{{ url_for('static', filename='img/copy.jpg') }}" style="width: 100%;"/>
+                  </a>
+              </td>
+            </tr>
+          </table>
+          <img src="{{ url_for('static', filename='img/a_05.jpg') }}" style="width: 100%;"/>
+        </div>
         
         <div style="width: 60%; height: 100px; margin-left: 20%; margin-top: 60px;">
           <table>
@@ -310,7 +305,32 @@
         
       </div>
         
-      
+      <script type="text/javascript">
+        function sendLink() {
+          Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+              title: '구본상·김보경 모바일 청첩장',
+              description: '#구본상 #김보경 #청접장 #12월13일 #청담드레스가든',
+              imageUrl:
+                'https://bk000-wedding.herokuapp.com/static/img/slider/2_3.jpg',
+              link: {
+                mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
+                webUrl: 'https://bk000-wedding.herokuapp.com/',
+              },
+            },
+            buttons: [
+              {
+                title: '청첩장 보기',
+                link: {
+                  mobileWebUrl: 'https://bk000-wedding.herokuapp.com/',
+                  webUrl: 'https://bk000-wedding.herokuapp.com/',
+                },
+              },
+            ],
+          })
+        }
+      </script>
       <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         
@@ -335,13 +355,10 @@
               }
             });
           }
-          function copyfunc(id) {
-            
-              /* Get the text field */
-              var copyText = $('#'+id);
+          function copyfunc(text) {
 
               const el = document.createElement('textarea');
-              el.value = copyText.text();
+              el.value = text;
               el.setAttribute('readonly', '');
               el.style.position = 'absolute';
               el.style.left = '-9999px';
@@ -364,6 +381,8 @@
                     fade: true,
                     centerMode: true,
                     asNavFor: '.slider-nav',
+                    prevArrow: "<button class='prev'><img src='/static/img/prev.png' /></button>",
+                    nextArrow: "<button class='next'><img src='/static/img/next.png' /></button>"
                     // adaptiveHeight: false
                 });
 
