@@ -7,7 +7,7 @@ def index():
 
 @app.route('/1')
 def index2():
-    return render_template('index1.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
