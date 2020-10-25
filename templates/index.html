@@ -5,33 +5,34 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="구본상·김보경 청첩장">
+        <meta property="og:title" content="구본상·김보경 모바일 청첩장">
         <meta property="og:url" content="http://m.site.naver.com/0G9q5">
-        <meta property="og:description" content="구본상·김보경 청첩장입니다. 2020년 12월 13일 일요일 오전11시, 청담 드레스가든">
-        <title>구본상·김보경 청첩장</title>
+        <meta property="og:description" content="2020년 12월 13일 (일) 오전11시, 청담 드레스가든">
+        <title>구본상·김보경 모바일 청첩장</title>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
         <style>
             body {
-              margin: 0px;
+              margin: 0px auto;
+              max-width: 800px;
             }
 
             .wrap {
+              /* width: 100%; */
+            }
+
+            .wrap img {
               width: 100%;
             }
 
-            .slider {
-                margin:  30px auto 20px;
-            }
 
             .slider img {
-                /* height: 400px; */
-                width: 100%;
+                /* width: 100% !important; */
             }
 
 
             .slider-nav img {
-                width: 100%;
+                /* width: 100%; */
             }
 
             .slider-nav div {
@@ -39,10 +40,8 @@
                 /* padding: 2%; */
             }
 
-            .slick-prev:before, .slick-next:before {
-                color: #aaa;
-            }
-
+         
+/* 
             .text-title {
               text-align: center;
             }
@@ -54,26 +53,25 @@
             .text-sub {
               font-size: 12px;
               margin-left: 30px;
-            }
+            } */
 
-            .footer {
+            table, tr, td {
+              
               width: 100%;
-              height: 200px;
-              margin-top: 70px;
-              background-color: goldenrod;
-            }
+            }            
+
+            
         </style>
     
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=g8v4dwcflm"></script>
     </head>
-    <body>
+    <body >
       <div class='wrap'>
       
-        <img src="{{ url_for('static', filename='img/img01.jpg') }}" style="width: 100%;"/>
+        <img src="{{ url_for('static', filename='img/main01.jpg') }}"/>
+        
         
 
-        <div class="text" style="margin-bottom: 110px;">
+        <!-- <div class="text" style="margin-bottom: 110px;">
           <p class="text-title">2020년 12월 13일 일요일 오전11시</p>
           <p class="text-title">청담 드레스가든<p>
           </br>
@@ -105,75 +103,191 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
+        
+        <table>
+          <tr>
+            <td rowspan="2" style="width: 85%;"><img src="{{ url_for('static', filename='img/img00.jpg') }}" alt="전화"></td>
+            <td style="vertical-align: bottom; padding-bottom: 8px;">
+              <a href="tel:01047262972">
+              <img src="{{ url_for('static', filename='img/ic_1.jpg') }}" class='phone_icon' id="icon_tel01" style="width: 60%;"/>
+            </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; padding-top: 3px;">
+              <a href="tel:01029158565">
+              <img src="{{ url_for('static', filename='img/ic_1.jpg') }}" class="phone_icon" id="icon_tel02" style="width: 60%;"/>
+              </a>
+            </td>    
+          </tr>
+        </table>
+        
 
-        <div style="width: 80%; margin-left: 10%; text-align: center;">
+        <div style="width: 90%; margin-left: 5%; overflow: hidden;"> 
           <div class="slider">
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+                <img src="{{ url_for('static', filename='img/slider/1.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+                <img src="{{ url_for('static', filename='img/slider/2.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+                <img src="{{ url_for('static', filename='img/slider/3.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+                <img src="{{ url_for('static', filename='img/slider/4.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+                <img src="{{ url_for('static', filename='img/slider/5.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+                <img src="{{ url_for('static', filename='img/slider/6.jpg') }}" style="    padding-top: 200px;"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/7.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/8.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/9.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/10.jpg') }}"/>
               </div>
           </div>
   
-          <div class="slider-nav">
+          <div class="slider-nav" >
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_1.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_2.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_3.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz1.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_4.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz2.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_5.jpg') }}"/>
               </div>
               <div>
-                <img src="http://kenwheeler.github.io/slick/img/fonz3.png" />
+                <img src="{{ url_for('static', filename='img/slider/2_6.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/2_7.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/2_8.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/2_9.jpg') }}"/>
+              </div>
+              <div>
+                <img src="{{ url_for('static', filename='img/slider/2_10.jpg') }}"/>
               </div>
           </div>
         </div>
 
-        <div style="padding:30px 0px 20px 0px">
+        <!-- <div style="padding:30px 0px 20px 0px">
           <p class="text-content">오시는 길</p>
           </br>
           <p class="text-content">청담 드레스가든</p>
           <p class="text-content">서울 강남구 영동대로 707</p>
-        </div>
+        </div> -->
+        
+        <table>
+          <tr>
+            <td style="width: 85%;"><img src="{{ url_for('static', filename='img/img01.jpg') }}"/></td>
+            <td style="vertical-align: middle;padding-top: 13%;">
+              <a href="tel:025121000">
+              <img src="{{ url_for('static', filename='img/ic_1.jpg') }}" class='phone_icon' id="icon_tel01" style="width: 60%;"/>
+              </a>
+            </td>
+          </tr>
+        </table>
+        
+        <!-- <img src="{{ url_for('static', filename='img/ic_1.jpg') }}" class='phone_icon' id="icon_tel02" style="top: -86px; right:10px"/> -->
   
-          <div id="daumRoughmapContainer1602990447168" class="root_daum_roughmap root_daum_roughmap_landing" style="margin: 0 auto;"></div>
+        <div id="daumRoughmapContainer1602990447168" class="root_daum_roughmap root_daum_roughmap_landing" style="margin: 0 auto;"></div>
 
-          <div class='footer'></div>
+        <img src="{{ url_for('static', filename='img/img02.jpg') }}"/>
+        
+        <div style="text-align: center;">
+          <table style="width: 90%; margin-left:5%; text-align: left;">
+            <tr>
+              <td style="width: 25%;">신랑혼주</td>
+              <td style="width: 70%;" id="id_01">농협 356-0548-2625-33 (구자역)</td>
+              <td style="width: 15%;">
+                <a href="javascript:copyfunc('id_01');">복사</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 25%;">신랑</td>
+              <td style="width: 70%;" id="id_02">신한 110-349-232252  (구본상)</td>
+              <td style="width: 15%;">
+                <a href="javascript:copyfunc('id_01');">복사</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 25%;">신부혼주</td>
+              <td style="width: 70%;" id="id_03">국민  (김종국)</td>
+              <td style="width: 15%;">
+                <a href="javascript:copyfunc('id_03');">복사</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <a href="javascript:share();">공유</a>
+        <img src="{{ url_for('static', filename='img/img03.jpg') }}"/>
+        <img src="{{ url_for('static', filename='img/footer.jpg') }}"/>
       </div>
         
       
-      
-      
-        
+      <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         
 
-
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
         <script>
+          function share(){
+            if (navigator.share) {
+              navigator.share({
+                title: document.title,
+                text: "Hello World",
+                url: window.location.href
+              }).then(() => console.log('Successful share'))
+              .catch(error => console.log('Error sharing:', error));
+            }
+          }
+          function copyfunc(id) {
+            
+              /* Get the text field */
+              var copyText = $('#'+id);
+
+              const el = document.createElement('textarea');
+              el.value = copyText.text();
+              el.setAttribute('readonly', '');
+              el.style.position = 'absolute';
+              el.style.left = '-9999px';
+              document.body.appendChild(el);
+              el.select();
+              el.setSelectionRange(0, 99999); /*For mobile devices*/
+              
+
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+            }
+
+
             $(document).ready(function(){
+
+              
+                           
+
                 $('.slider').slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -181,7 +295,7 @@
                     fade: true,
                     centerMode: true,
                     asNavFor: '.slider-nav',
-                    adaptiveHeight: true
+                    // adaptiveHeight: false
                 });
 
                 $('.slider-nav').slick({
@@ -189,7 +303,7 @@
                     slidesToScroll: 1,
                     asNavFor: '.slider',
                     dots: false,
-                    arrows: false,
+                    // arrows: false,
                     centerMode: true,
                     focusOnSelect: true
                 })
