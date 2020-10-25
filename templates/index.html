@@ -242,11 +242,23 @@
             </tr>
           </table>
         </div>
-        <a id="kakao-link-btn" href="javascript:sendLink()">
+        
+
+
+        
+        <a id="share_btn" href="javascript:share()">
+          공유하기
+        </a>
+
+
+        <a style="width: 5%;" id="kakao-link-btn" href="javascript:sendLink()">
           <img
             src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
           />
         </a>
+
+
+
         <script type="text/javascript">
           function sendLink() {
             Kakao.Link.sendDefault({
@@ -274,7 +286,7 @@
           }
         </script>
 
-        
+
         <img src="{{ url_for('static', filename='img/img03.jpg') }}"/>
         <img src="{{ url_for('static', filename='img/footer.jpg') }}"/>
       </div>
@@ -290,14 +302,19 @@
           Kakao.isInitialized();
 
           function share(){
-            if (navigator.share) {
-              navigator.share({
-                title: document.title,
-                text: "Hello World",
-                url: window.location.href
-              }).then(() => console.log('Successful share'))
-              .catch(error => console.log('Error sharing:', error));
-            }
+            $("#share_btn").on('click', event => {
+              if (navigator.share) {
+                navigator.share({
+                  title: 'WebShare API Demo',
+                  url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+                }).then(() => {
+                  console.log('Thanks for sharing!');
+                })
+                .catch(console.error);
+              } else {
+                shareDialog.classList.add('is-open');
+              }
+            });
           }
           function copyfunc(id) {
             
